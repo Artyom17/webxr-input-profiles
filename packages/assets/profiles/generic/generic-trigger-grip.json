@@ -10,30 +10,30 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "some-url",
-            "rootNodeName" : "right-controller-node"
+            "path" : "generic-trigger-grip-R.glb",
+            "rootNodeName" : "generic_trigger_grip_R"
         }
     },
     "layouts": {
         "left-right-none": {
             "components" : {
                 "xr-standard-trigger": {
-                    "rootNodeName" : "trigger-node",
+                    "rootNodeName" : "TRIGGER",
                     "labelAnchorNodeName" : "trigger-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
+                            "rootNodeName" : "TRIGGER",
                             "source" : "button",
                             "states" : ["default", "touched", "pressed"]
                         }
                     ]
                 },
                 "xr-standard-grip": {
-                    "rootNodeName" : "grip-node",
+                    "rootNodeName" : "GRIP",
                     "labelAnchorNodeName" : "grip-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
+                            "rootNodeName" : "GRIP",
                             "source" : "button",
                             "states" : ["pressed"]
                         }

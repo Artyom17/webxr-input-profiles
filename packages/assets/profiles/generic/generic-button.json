@@ -1,3 +1,4 @@
+  
 {
     "profileId" : "generic-button",
     "assets" : {
@@ -10,19 +11,19 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "some-url",
-            "rootNodeName" : "right-controller-node"
+            "path" : "generic-button-R.glb",
+            "rootNodeName" : "generic_button_R"
         }
     },
     "layouts" : {
         "left-right-none": {
             "components": {
                 "faceButton": {
-                    "rootNodeName" : "button-node",
+                    "rootNodeName" : "BUTTON",
                     "labelAnchorNodeName" : "button-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
+                            "rootNodeName" : "BUTTON",
                             "source" : "button",
                             "states" : ["default", "touched", "pressed"]
                         }

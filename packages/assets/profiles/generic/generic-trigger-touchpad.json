@@ -10,28 +10,28 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "some-url",
-            "rootNodeName" : "right-controller-node"
+            "path" : "generic-trigger-touchpad-R.glb",
+            "rootNodeName" : "generic_trigger_touchpad_R"
         }
     },
     "layouts": {
         "left-right-none": {
             "components" : {
                 "xr-standard-trigger": {
-                    "rootNodeName" : "trigger-node",
+                    "rootNodeName" : "TRIGGER",
                     "labelAnchorNodeName" : "trigger-label-transform",
                     "visualResponses" : [
                         {
-                            "rootNodeName" : "SELECT",
+                            "rootNodeName" : "TRIGGER",
                             "source" : "button",
                             "states" : ["default", "touched", "pressed"]
                         }
                     ]
                 },
                 "xr-standard-touchpad": {
-                    "rootNodeName" : "touchpad-node",
+                    "rootNodeName" : "TOUCHPAD_PRESS",
                     "labelAnchorNodeName" : "touchpad-label-transform",
-                    "touchPointNodeName" : "touchpad-dot",
+                    "touchPointNodeName" : "TOUCH",
                     "visualResponses" : [
                         {
                             "rootNodeName": "TOUCHPAD_PRESS",

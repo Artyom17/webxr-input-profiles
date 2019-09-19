@@ -10,17 +10,17 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "some-url",
-            "rootNodeName" : "right-controller-node"
+            "path" : "generic-touchpad-R.glb",
+            "rootNodeName" : "generic_touchpad_R"
         }
     },
     "layouts": {
         "left-right-none": {
             "components": {
                 "touchpad": {
-                    "rootNodeName" : "touchpad-node",
+                    "rootNodeName" : "TOUCHPAD_PRESS",
                     "labelAnchorNodeName" : "touchpad-label-transform",
-                    "touchPointNodeName" : "touchpad-dot",
+                    "touchPointNodeName" : "TOUCH",
                     "visualResponses" : [
                         {
                             "rootNodeName": "TOUCHPAD_PRESS",

@@ -10,8 +10,8 @@
             "rootNodeName" : "left-controller-node"
         },
         "right" : {
-            "path" : "generic-trigger-grip-touchpad-thumbstick/right.glb",
-            "rootNodeName" : "xrstandard_touchpad_thumbstick_R"
+            "path" : "generic-trigger-grip-touchpad-thumbstick-R.glb",
+            "rootNodeName" : "generic_trigger_grip_touchpad_thumbstick_R"
         }
     },
     "layouts": {
