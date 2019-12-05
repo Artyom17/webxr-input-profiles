@@ -1,0 +1,247 @@
+{
+  "profileId": "oculus-touch-v2",
+  "layouts": {
+    "left": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "SELECT",
+          "labelAnchorNodeName": "trigger-label",
+          "analogButtonValues": true,
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "GRASP",
+          "labelAnchorNodeName": "squeeze-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "GRASP",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            }
+          ]
+        },
+        "xr-standard-thumbstick": {
+          "type": "thumbstick",
+          "gamepadIndices": {
+            "button": 3,
+            "x-axis": 2,
+            "y-axis": 3
+          },
+          "rootNodeName": "THUMBSTICK_PRESS",
+          "labelAnchorNodeName": "thumbstick-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "THUMBSTICK_PRESS",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            },
+            {
+              "rootNodeName": "THUMBSTICK_X",
+              "componentProperty": "x-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "THUMBSTICK_Y",
+              "componentProperty": "y-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "a-button": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 4
+          },
+          "rootNodeName": "A-BUTTON",
+          "labelAnchorNodeName": "A-BUTTON-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "A-BUTTON",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "b-button": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 5
+          },
+          "rootNodeName": "B-BUTTON",
+          "labelAnchorNodeName": "B-BUTTON-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "B-BUTTON",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "left.glb",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "SELECT",
+          "labelAnchorNodeName": "trigger-label",
+          "analogButtonValues": true,
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "GRASP",
+          "labelAnchorNodeName": "squeeze-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "GRASP",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            }
+          ]
+        },
+        "xr-standard-thumbstick": {
+          "type": "thumbstick",
+          "gamepadIndices": {
+            "button": 3,
+            "x-axis": 2,
+            "y-axis": 3
+          },
+          "rootNodeName": "THUMBSTICK_PRESS",
+          "labelAnchorNodeName": "thumbstick-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "THUMBSTICK_PRESS",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ],
+              "minNodeName": "UNPRESSED",
+              "maxNodeName": "PRESSED"
+            },
+            {
+              "rootNodeName": "THUMBSTICK_X",
+              "componentProperty": "x-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "THUMBSTICK_Y",
+              "componentProperty": "y-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "x-button": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 4
+          },
+          "rootNodeName": "X-BUTTON",
+          "labelAnchorNodeName": "X-BUTTON-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "X-BUTTON",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "y-button": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 5
+          },
+          "rootNodeName": "Y-BUTTON",
+          "labelAnchorNodeName": "Y-BUTTON-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "Y-BUTTON",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "right.glb",
+      "rootNodeName": "right-controller-node"
+    }
+  }
+}

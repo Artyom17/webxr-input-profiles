@@ -1,0 +1,134 @@
+{
+  "profileId": "generic-trigger-squeeze",
+  "layouts": {
+    "left": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "squeeze-node",
+          "labelAnchorNodeName": "squeeze-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "squeeze-node",
+          "labelAnchorNodeName": "squeeze-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "right-controller-node"
+    },
+    "none": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "trigger-node",
+          "labelAnchorNodeName": "trigger-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "squeeze-node",
+          "labelAnchorNodeName": "squeeze-label-transform",
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "some-url",
+      "rootNodeName": "none-controller-node"
+    }
+  }
+}

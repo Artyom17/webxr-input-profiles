@@ -1,0 +1,329 @@
+{
+  "profileId": "htc-vive",
+  "layouts": {
+    "left": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "SELECT",
+          "labelAnchorNodeName": "trigger-label",
+          "analogButtonValues": true,
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "GRASP",
+          "labelAnchorNodeName": "squeeze-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "GRASP",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 2,
+            "x-axis": 0,
+            "y-axis": 1
+          },
+          "rootNodeName": "TOUCHPAD_PRESS",
+          "labelAnchorNodeName": "squeeze-label",
+          "touchPointNodeName": "TOUCH",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "componentProperty": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "componentProperty": "x-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "componentProperty": "y-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "menu": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 4
+          },
+          "rootNodeName": "MENU",
+          "labelAnchorNodeName": "menu-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "MENU",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "left.glb",
+      "rootNodeName": "left-controller-node"
+    },
+    "right": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "SELECT",
+          "labelAnchorNodeName": "trigger-label",
+          "analogButtonValues": true,
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "GRASP",
+          "labelAnchorNodeName": "squeeze-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "GRASP",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 2,
+            "x-axis": 0,
+            "y-axis": 1
+          },
+          "rootNodeName": "TOUCHPAD_PRESS",
+          "labelAnchorNodeName": "squeeze-label",
+          "touchPointNodeName": "TOUCH",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "componentProperty": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "componentProperty": "x-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "componentProperty": "y-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "menu": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 4
+          },
+          "rootNodeName": "MENU",
+          "labelAnchorNodeName": "menu-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "MENU",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "right.glb",
+      "rootNodeName": "right-controller-node"
+    },
+    "none": {
+      "mapping": "xr-standard",
+      "components": {
+        "xr-standard-trigger": {
+          "type": "trigger",
+          "gamepadIndices": {
+            "button": 0
+          },
+          "rootNodeName": "SELECT",
+          "labelAnchorNodeName": "trigger-label",
+          "analogButtonValues": true,
+          "visualResponses": [
+            {
+              "rootNodeName": "SELECT",
+              "componentProperty": "button",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-squeeze": {
+          "type": "squeeze",
+          "gamepadIndices": {
+            "button": 1
+          },
+          "rootNodeName": "GRASP",
+          "labelAnchorNodeName": "squeeze-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "GRASP",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "xr-standard-touchpad": {
+          "type": "touchpad",
+          "gamepadIndices": {
+            "button": 2,
+            "x-axis": 0,
+            "y-axis": 1
+          },
+          "rootNodeName": "TOUCHPAD_PRESS",
+          "labelAnchorNodeName": "squeeze-label",
+          "touchPointNodeName": "TOUCH",
+          "visualResponses": [
+            {
+              "rootNodeName": "TOUCHPAD_PRESS",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCH",
+              "componentProperty": "state",
+              "states": [
+                "touched",
+                "pressed"
+              ],
+              "property": "visibility"
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_X",
+              "componentProperty": "x-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            },
+            {
+              "rootNodeName": "TOUCHPAD_TOUCH_Y",
+              "componentProperty": "y-axis",
+              "states": [
+                "default",
+                "touched",
+                "pressed"
+              ]
+            }
+          ]
+        },
+        "menu": {
+          "type": "button",
+          "gamepadIndices": {
+            "button": 4
+          },
+          "rootNodeName": "MENU",
+          "labelAnchorNodeName": "menu-label",
+          "visualResponses": [
+            {
+              "rootNodeName": "MENU",
+              "componentProperty": "state",
+              "states": [
+                "pressed"
+              ]
+            }
+          ]
+        }
+      },
+      "path": "none.glb",
+      "rootNodeName": "none-controller-node"
+    }
+  }
+}

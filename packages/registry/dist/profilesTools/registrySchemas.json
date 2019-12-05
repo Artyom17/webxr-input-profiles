@@ -1,0 +1,239 @@
+{
+  "mainSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://immersive-web/webxr-input-profiles/registry/profile.schema.json",
+    "type": "object",
+    "description": "The root object for an XRInputSource profile.",
+    "additionalProperties": true,
+    "required": [
+      "profileId",
+      "fallbackProfileIds",
+      "layouts"
+    ],
+    "properties": {
+      "profileId": {
+        "$ref": "common.schema.json#/definitions/profileId"
+      },
+      "fallbackProfileIds": {
+        "type": "array",
+        "items": {
+          "$ref": "common.schema.json#/definitions/profileId"
+        },
+        "uniqueItems": true
+      },
+      "layouts": {
+        "allOf": [
+          {
+            "additionalProperties": false,
+            "properties": {
+              "none": {
+                "$ref": "layout.schema.json"
+              },
+              "left": {
+                "$ref": "layout.schema.json"
+              },
+              "right": {
+                "$ref": "layout.schema.json"
+              },
+              "left-right": {
+                "$ref": "layout.schema.json"
+              },
+              "left-right-none": {
+                "$ref": "layout.schema.json"
+              }
+            }
+          },
+          {
+            "$ref": "common.schema.json#/definitions/handedness"
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": [
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/registry/common.schema.json",
+      "definitions": {
+        "profileId": {
+          "description": "A properly formatted string uniquely identifying a profile",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)+$"
+        },
+        "handedness": {
+          "type": "object",
+          "minProperties": 1,
+          "dependencies": {
+            "left-right-none": {
+              "not": {
+                "required": [
+                  "none",
+                  "left",
+                  "right",
+                  "left-right"
+                ]
+              }
+            },
+            "left-right": {
+              "not": {
+                "required": [
+                  "left",
+                  "right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "left": {
+              "required": [
+                "right"
+              ],
+              "not": {
+                "required": [
+                  "left-right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "right": {
+              "required": [
+                "left"
+              ],
+              "not": {
+                "required": [
+                  "left-right",
+                  "left-right-none"
+                ]
+              }
+            },
+            "none": {
+              "not": {
+                "required": [
+                  "left-right-none"
+                ]
+              }
+            }
+          }
+        },
+        "componentId": {
+          "description": "A well-formatted component id",
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "components": {
+          "description": "The collection of components in the layout",
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[^\\s]+.+[^\\s]$": {
+              "$ref": "component.schema.json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/registry/component.schema.json",
+      "type": "object",
+      "description": "Component description",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "trigger",
+            "squeeze",
+            "touchpad",
+            "thumbstick",
+            "button"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ]
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema",
+      "$id": "https://immersive-web/webxr-input-profiles/registry/layout.schema.json",
+      "type": "object",
+      "description": "A layout",
+      "additionalProperties": false,
+      "required": [
+        "components",
+        "selectComponentId"
+      ],
+      "properties": {
+        "selectComponentId": {
+          "$ref": "common.schema.json#/definitions/componentId"
+        },
+        "components": {
+          "$ref": "common.schema.json#/definitions/components"
+        },
+        "gamepad": {
+          "type": "object",
+          "required": [
+            "mapping",
+            "buttons",
+            "axes"
+          ],
+          "properties": {
+            "mapping": {
+              "description": "The Gamepad.mapping value",
+              "type": "string",
+              "enum": [
+                "",
+                "xr-standard"
+              ]
+            },
+            "buttons": {
+              "description": "An array that maps to the entries in the Gamepad's buttons array",
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "$ref": "common.schema.json#/definitions/componentId"
+                  }
+                ]
+              }
+            },
+            "axes": {
+              "description": "An array that maps to the entries in the Gamepad's axes array",
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "description": "A description of which component and which axis on that component is represented by this entry in the Gamepad's axes array",
+                    "type": "object",
+                    "required": [
+                      "componentId",
+                      "axis"
+                    ],
+                    "properties": {
+                      "componentId": {
+                        "$ref": "common.schema.json#/definitions/componentId"
+                      },
+                      "axis": {
+                        "type": "string",
+                        "enum": [
+                          "x-axis",
+                          "y-axis"
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
